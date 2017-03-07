@@ -2,6 +2,7 @@ import fresh_tomatoes
 import media
 import omdb
 
+# omdb.get is a GET request to obtain movie information from the OMDB API
 groundhog_omdb = omdb.get(title='Groundhog Day',
                           year=1993, fullplot=True, tomatoes=True)
 what_we_do_omdb = omdb.get(title='What We Do In The Shadows',
@@ -14,7 +15,7 @@ mistaken_for_strangers_omdb = omdb.get(title='Mistaken For Strangers',
                                        year=2013, fullplot=True, tomatoes=True)
 no_country_omdb = omdb.get(title="No Country For Old Men",
                            year=2007, fullplot=True, tomatoes=True)
-
+    
 groundhog_day = media.Movie("Groundhog Day",
                         groundhog_omdb.plot,
                         groundhog_omdb.genre,
@@ -27,7 +28,7 @@ what_we_do = media.Movie("What We Do In The Shadows",
                      what_we_do_omdb.genre,
                      what_we_do_omdb.tomato_meter,
                      what_we_do_omdb.poster,
-                     "https://www.youtube.com/watch?v=IAZEWtyhpes")
+                     "https://www.youtube.com/watch?v=IAZEWtyhpes")                    
 
 ex_machina = media.Movie("Ex Machina",
                          ex_machina_omdb.plot,
@@ -57,6 +58,5 @@ no_country = media.Movie("No Country For Old Men",
                          no_country_omdb.poster,
                          "https://www.youtube.com/watch?v=38A__WT3-o0")
 
-movies = [groundhog_day, what_we_do, ex_machina, goodfellas,
-    mistaken_for_strangers, no_country]
+movies = [groundhog_day, what_we_do, ex_machina, goodfellas, mistaken_for_strangers, no_country]
 fresh_tomatoes.open_movies_page(movies)
