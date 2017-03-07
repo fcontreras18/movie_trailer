@@ -1,6 +1,6 @@
 import fresh_tomatoes
 import media
-
+    
 groundhog_day = media.Movie("Groundhog Day",
                         "A reporter repeats the same day in a small town, forever.",
                         "https://upload.wikimedia.org/wikipedia/en/b/b1/Groundhog_Day_%28movie_poster%29.jpg",
@@ -33,4 +33,3 @@ no_country = media.Movie("No Country For Old Men",
 
 movies = [groundhog_day, what_we_do, ex_machina, goodfellas, mistaken_for_strangers, no_country]
 fresh_tomatoes.open_movies_page(movies)
-
